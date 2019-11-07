@@ -3,6 +3,7 @@
     Created on : Oct 31, 2019, 10:09:14 AM
     Author     : lendle
 --%>
+<%--<%@page import="java.util.ArrayList"%>--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -17,6 +18,7 @@
         question 3 (10%)
         將表單的目標設定爲 addOrder，使用 post
         -->
+        <form action="addOrder" method="POST">
         <form>
             <select name="food">
                 <option value="氧氣草">氧氣草</option>

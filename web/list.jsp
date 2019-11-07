@@ -29,6 +29,20 @@
                 例如
                 <tr><td>烤雞腿</td></tr>
                 -->
+                <!--<body>-->
+                    <form method="POST" action="addOrder">
+                        <ol>
+                            <%
+                                ArrayList list=(ArrayList)session.getAttribute("list");
+                                for(int i=0; list!=null && i<list.size();i++){
+                                    String t=(String)list.get(i);
+                                    out.println("<li>"+t+"</li>");
+                                }
+                            %>
+                         </ol>
+                        <input type="text" name="t"/><input type="submit">
+                    </form>
+                <!--</body>-->
                 
             </tbody>
         </table>
@@ -37,5 +51,6 @@
         question 2 (10%)
         引用 /WEB-INF/footer.jsp
         -->
+        <%@include file="/WEB-INF/footer.jsp"%>
     </body>
 </html>

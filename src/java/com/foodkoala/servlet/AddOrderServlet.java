@@ -42,6 +42,15 @@ public class AddOrderServlet extends HttpServlet {
         question 6 (10%)
         最後外轉址到 list.jsp
         */
+        String t=request.getParameter("t");
+        HttpSession session=request.getSession();
+        ArrayList list=(ArrayList) session.getAttribute("list");
+        if(list==null){
+            list=new ArrayList();
+            session.setAttribute("list", list);
+        }
+        list.add(t);
+        response.sendRedirect("list.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
